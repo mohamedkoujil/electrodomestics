@@ -15,15 +15,14 @@ class Rentadora: Electrodomestic {
      * Funció que comprova la carrega de la rentadora i retorna el seu plus
      * @author mohamedkoujil
      * @since 4/02/2024
-     * @param carrega
      * @return plus de la carrega
      */
-    private fun calcularPlusCarrega(carrega: Double): Double {
-        return when {
-            carrega in 6.0..7.0 -> 55.0
-            carrega == 8.0 -> 70.0
-            carrega == 9.0 -> 85.0
-            carrega == 10.0 -> 100.0
+    private fun calcularPlusCarrega(): Double {
+        return when (carrega) {
+            in 6.0..7.0 -> 55.0
+            8.0 -> 70.0
+            9.0 -> 85.0
+            10.0 -> 100.0
             else -> 0.0
         }
     }
@@ -35,7 +34,7 @@ class Rentadora: Electrodomestic {
      * @return preu final
      */
     override fun preuFinal(): Double {
-        return this.preuBase + calcularPlusCarrega(carrega)
+        return this.preuBase + calcularPlusCarrega()
     }
 
     /**

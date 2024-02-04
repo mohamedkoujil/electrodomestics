@@ -20,8 +20,8 @@ fun arrayElectrodemestics(): Array<Electrodomestic> {
         Electrodomestic(400.0, "negre", 'F', 70),
         Rentadora(400.0, 5.0),
         Rentadora(500.0, 8.0),
-        Televisio(800.0, 52),
-        Televisio(350.0, 28),
+        Televisio(800.0, 52.0),
+        Televisio(350.0, 28.0),
     )
 }
 
@@ -33,7 +33,7 @@ fun arrayElectrodemestics(): Array<Electrodomestic> {
  * @return Llista de rentadores
  */
 fun filtreRentadores(electrodomestics: Array<Electrodomestic>): MutableList<Rentadora> {
-    var rentadores = mutableListOf<Rentadora>()
+    val rentadores = mutableListOf<Rentadora>()
     for (electrodomestic in electrodomestics) {
         if (electrodomestic is Rentadora) {
             rentadores.add(electrodomestic)
@@ -50,7 +50,7 @@ fun filtreRentadores(electrodomestics: Array<Electrodomestic>): MutableList<Rent
  * @return Llista de televisors
  */
 fun filtreTelevisions(electrodomestics: Array<Electrodomestic>): MutableList<Televisio> {
-    var televisions = mutableListOf<Televisio>()
+    val televisions = mutableListOf<Televisio>()
     for (electrodomestic in electrodomestics) {
         if (electrodomestic is Televisio) {
             televisions.add(electrodomestic)
