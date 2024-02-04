@@ -1,9 +1,9 @@
 import controllers.*
 
 fun main() {
-    var electrodomestics = arrayElectrodemestics()
-    var rentadores = filtreRentadores(electrodomestics)
-    var televisions = filtreTelevisions(electrodomestics)
+    val electrodomestics = arrayElectrodemestics()
+    val rentadores = filtreRentadores(electrodomestics)
+    val televisions = filtreTelevisions(electrodomestics)
 
     imprimirElectrodomestics(electrodomestics)
     imprimirElectrodomestics(rentadores.toTypedArray())

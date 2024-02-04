@@ -2,9 +2,9 @@ package classes
 open class Electrodomestic {
 
     protected var preuBase: Double
-    protected var color: String = "blanc"
-    protected var consum: Char = 'G'
-    protected var pes: Int = 5
+    private var color: String = "blanc"
+    private var consum: Char = 'G'
+    private var pes: Int = 5
 
     constructor(preuBase: Double, color: String, consum: Char, pes: Int) {
         this.preuBase = preuBase
@@ -24,8 +24,8 @@ open class Electrodomestic {
      * @return preu final
      */
     open fun preuFinal(): Double {
-        var plusConsum = comprovarConsum()
-        var plusPes = comprovarPes(pes)
+        val plusConsum = comprovarConsum()
+        val plusPes = comprovarPes(pes)
         return preuBase + plusConsum + plusPes
     }
 
@@ -33,7 +33,6 @@ open class Electrodomestic {
      * Funció que comprova el consum de l'electrodomèstic i retorna el seu plus
      * @author mohamedkoujil
      * @since 4/02/2024
-     * @param consum
      * @return plus del consum
      */
     private fun comprovarConsum(): Double {
