@@ -70,19 +70,19 @@ fun imprimirElectrodomestics(electrodomestics: Array<Electrodomestic>) {
     when (electrodomestics[0]) {
         is Rentadora -> {
             for (i in electrodomestics.indices) {
-                println("classes.Rentadora ${i + 1}:")
+                println("Rentadora ${i + 1}:")
                 println(electrodomestics[i])
             }
         }
         is Televisio -> {
             for (i in electrodomestics.indices) {
-                println("classes.Televisio ${i + 1}:")
+                println("Televisio ${i + 1}:")
                 println(electrodomestics[i])
             }
         }
         else -> {
             for (i in electrodomestics.indices) {
-                println("classes.Electrodomestic ${i + 1}:")
+                println("Electrodomestic ${i + 1}:")
                 println(electrodomestics[i])
             }
         }
